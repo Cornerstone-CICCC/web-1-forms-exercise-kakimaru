@@ -8,7 +8,105 @@
 </head>
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">
+            <span>Name:</span>
+            <input type="text" name="name" id="name">
+          </label>
+          <label>
+            <span>Email:</span>
+            <input type="email" required>
+          </label>
+          <label>
+            <span>Password:</span>
+            <input type="password" minlength="12">
+          </label>
+          <div>
+            <label for="dob">
+              <span>Date of Birth:</span>
+              <input type="date" name="dob" id="dob">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <label>
+            <span>Favorite Color:</span>
+            <input type="color" name="color">
+          </label>
+          <div>
+            <label for="hobby">
+              <span>Hobby:</span>
+              <input type="text" name="hobby" list="hobby-options">
+              <datalist id="hobby-options">
+                <option value="Drawing">Drawing</option>
+                <option value="Swimming">Swimming</option>
+                <option value="Dancing">Dancing</option>
+              </datalist>
+            </label>
+          </div>
+          <div>
+            <label for="experience">
+              <span>Experience Level:</span>
+              <input type="range" name="experience" id="experience" min="0" max="10" step=".5">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Contact Preferences</legend>
+          <label>
+            <span>Preferred Contact Method:</span>
+            <select name="method" id="method">
+              <option value="Email" selected>Email</option>
+              <option value="Phone">Phone</option>
+              <option value="Mail">Mail</option>
+            </select>
+          </label>
+          <label>
+            <span>Subscribe to Newsletter</span>
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <label>
+            <span>Gender</span>
+            <label class="radio">
+              <input type="radio" name="gender" value="Male" checked="">
+              <span>Male</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="gender" value="Female" checked="">
+              <span>Female</span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="gender" value="Other" checked="">
+              <span>Other</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>More Information</legend>
+          <label>
+            <span>Bio</span>
+            <textarea name="" id=""></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Upload Documents</legend>
+          <label>
+            <span>Resume and other certifications:</span>
+            <input type="file" name="resume_file" multiple="" accept=".doc, .docx, .pdf, .jpg, .png">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Submission</legend>
+          <div class="btnwrap">
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </fieldset>
     </form>
 </body>
 </html>
